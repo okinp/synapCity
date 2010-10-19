@@ -65,11 +65,10 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 309221922;
-			PBXWorkspaceStateSaveDate = 309221922;
+			PBXPerProjectTemplateStateSaveDate = 309222176;
+			PBXWorkspaceStateSaveDate = 309222176;
 		};
 		perUserProjectItems = {
-			8E01B04F126E5A2800D74E92 /* PBXTextBookmark */ = 8E01B04F126E5A2800D74E92 /* PBXTextBookmark */;
 			8E01B05A126E5A9D00D74E92 /* PBXTextBookmark */ = 8E01B05A126E5A9D00D74E92 /* PBXTextBookmark */;
 			8E190166126E540C009B939D /* PBXTextBookmark */ = 8E190166126E540C009B939D /* PBXTextBookmark */;
 			8E190199126E56F3009B939D /* PBXTextBookmark */ = 8E190199126E56F3009B939D /* PBXTextBookmark */;
@@ -78,6 +77,7 @@
 			8E4F787012515043009736DB /* PBXTextBookmark */ = 8E4F787012515043009736DB /* PBXTextBookmark */;
 			8E55CEA7125416980035D768 /* PlistBookmark */ = 8E55CEA7125416980035D768 /* PlistBookmark */;
 			8E55CEFB125421190035D768 /* PBXTextBookmark */ = 8E55CEFB125421190035D768 /* PBXTextBookmark */;
+			8E56564A126E5B4D004553C0 /* PBXTextBookmark */ = 8E56564A126E5B4D004553C0 /* PBXTextBookmark */;
 			8E71A00C125EB7470025E8BD /* PBXTextBookmark */ = 8E71A00C125EB7470025E8BD /* PBXTextBookmark */;
 			8E81F13E125445B4008845B6 /* PBXTextBookmark */ = 8E81F13E125445B4008845B6 /* PBXTextBookmark */;
 			8E81F152125448CD008845B6 /* PBXBookmark */ = 8E81F152125448CD008845B6 /* PBXBookmark */;
@@ -116,16 +116,6 @@
 		executables = (
 			8E112B69124EB8A400E39E36 /* synapcityViz */,
 		);
-	};
-	8E01B04F126E5A2800D74E92 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 8EC797D81252FF5E00516D34 /* clusterSystem.cpp */;
-		name = "clusterSystem.cpp: 110";
-		rLen = 0;
-		rLoc = 2327;
-		rType = 0;
-		vrLen = 274;
-		vrLoc = 2144;
 	};
 	8E01B05A126E5A9D00D74E92 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -274,6 +264,16 @@
 		rType = 0;
 		vrLen = 3736;
 		vrLoc = 0;
+	};
+	8E56564A126E5B4D004553C0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8EC797D81252FF5E00516D34 /* clusterSystem.cpp */;
+		name = "clusterSystem.cpp: 113";
+		rLen = 0;
+		rLoc = 2369;
+		rType = 0;
+		vrLen = 915;
+		vrLoc = 1787;
 	};
 	8E71A00C125EB7470025E8BD /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -535,9 +535,9 @@
 	};
 	8EC797D81252FF5E00516D34 /* clusterSystem.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1379, 4927}}";
-			sepNavSelRange = "{2327, 0}";
-			sepNavVisRange = "{2144, 274}";
+			sepNavIntBoundsRect = "{{0, 0}, {1013, 5070}}";
+			sepNavSelRange = "{2369, 0}";
+			sepNavVisRange = "{1654, 1046}";
 		};
 	};
 	8EC797D91252FF5E00516D34 /* jsonRead.cpp */ = {
