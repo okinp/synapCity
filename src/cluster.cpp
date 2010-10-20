@@ -97,7 +97,12 @@ vector<Particle> cluster::getParticles() {
 
 void cluster::draw()
 {
-	
+	//Randomly updating the equalizer in the label
+	//To be removed
+	for (int i=0; i<theLabel.equalizer.nLines; i++) {
+		theLabel.setData(i, Rand::randFloat());
+	}
+	//
 	int n = particles.size();
 	
 	glBegin(GL_POINTS);
