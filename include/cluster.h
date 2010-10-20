@@ -16,7 +16,7 @@
 #include "cinder/ImageIo.h"
 #include "cinder/Channel.h"
 #include "Label.h"
-
+#include "cinder/Timer.h"
 
 #define PI 3.14159265
 
@@ -69,6 +69,8 @@ public:
 	float centerRepulsion;
 	float mRadius;
 	Label theLabel;
+private:
+	Timer aTimer;
 	
 
 };
