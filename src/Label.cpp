@@ -15,12 +15,11 @@ Label::Label()
 Label::Label(Vec2i _pos)
 {
 	
-	//artworkTxt.setFont(Font("Arial", 32));
-	artworkTxt.setFont(Font(loadFile(cinder::app::App::get()->getResourcePath("etelkanarrowmediumpro.otf")), 38 ));
+	artworkTxt.setFont(Font(loadFile(cinder::app::App::get()->getResourcePath("etelkanarrowmediumpro.otf")), 20 ));
 	artworkTxt.setColor(Color(1.0f,1.0f,1.0f));
-	nameTxt.setFont(Font( loadFile(cinder::app::App::get()->getResourcePath("etelkanarrowlightpro.otf")), 20 ));
+	nameTxt.setFont(Font( loadFile(cinder::app::App::get()->getResourcePath("etelkanarrowlightpro.otf")), 11 ));
 	nameTxt.setColor(Color(1.0f,1.0f,1.0f));
-	primaryReadingsTxt.setFont(Font(loadFile(cinder::app::App::get()->getResourcePath( "etelkamonospacepro.otf")), 14));
+	primaryReadingsTxt.setFont(Font(loadFile(cinder::app::App::get()->getResourcePath( "etelkamonospacepro.otf")), 8));
 	primaryReadingsTxt.setColor(Color(1.0f,1.0f,1.0f));
 	
 	userName = "Michael Zick Doherty";
@@ -41,7 +40,7 @@ Label::Label(Vec2i _pos)
 	
 	pos = _pos;
 	//vLines(Vec2i _pos, int _width, int _nLines, int _spacing, int _length);
-	equalizer = vLines(Vec2i(artworkTexture.getWidth()+readingsTexture.getWidth()+4,readingsTexture.getHeight()-4)+pos, 2, 8, 3, readingsTexture.getHeight()-4);
+	equalizer = vLines(Vec2i(artworkTexture.getWidth()+readingsTexture.getWidth()+4,readingsTexture.getHeight()-4)+pos, 2, 8, 2, readingsTexture.getHeight()-4);
 	
 	//Set equalizer
 	for (int i=0; i<equalizer.nLines; i++) {
@@ -103,18 +102,18 @@ void Label::draw()
 	nameTexture = Texture( nameTxt.render(true));
 	artworkTexture = Texture(artworkTxt.render(true));
 	ci::gl::draw( artworkTexture, Vec2i( 0, 0 )+ pos );
-	ci::gl::draw(readingsTexture,Vec2i(0,4) + pos+Vec2i(artworkTexture.getWidth(),0));
-	ci::gl::draw(nameTexture, pos + Vec2i(0,artworkTexture.getHeight()));
+	ci::gl::draw(readingsTexture,Vec2i(2,4) + pos+Vec2i(artworkTexture.getWidth(),0));
+	ci::gl::draw(nameTexture, pos + Vec2i(0,artworkTexture.getHeight()+equalizer.width));
     popMatrices();
 	glDisable(GL_TEXTURE_2D);
 	
 	//Draw horizontal line
-	Vec2i hLinePos = Vec2i(0, 40)+pos;
-	int hLineLength = 120;
+	Vec2i hLinePos = Vec2i(0, artworkTexture.getHeight())+pos;
+	int hLineLength = artworkTexture.getWidth() + readingsTexture.getWidth() + equalizer.getWidth();
 	glBegin(GL_QUADS);
 	glVertex2f(hLinePos.x, hLinePos.y);
-	glVertex2f(hLinePos.x + hLineLength, hLinePos.y);
-	glVertex2f(hLinePos.x + hLineLength, hLinePos.y+equalizer.width);
+	glVertex2f(hLinePos.x + hLineLength + 5, hLinePos.y);
+	glVertex2f(hLinePos.x + hLineLength + 5, hLinePos.y+equalizer.width);
 	glVertex2f(hLinePos.x, hLinePos.y+equalizer.width);
 	glEnd();
 	 
