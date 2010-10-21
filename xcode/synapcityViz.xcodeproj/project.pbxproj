@@ -313,7 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				CINDER_PATH = /Developer/cinder/cinder_0.8.1_mac;
+				CINDER_PATH = /Users/macuser/Library/Frameworks/cinder/cinder_0.8.1_mac;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_FAST_MATH = YES;

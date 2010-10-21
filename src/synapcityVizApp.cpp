@@ -34,6 +34,8 @@ class synapcityVizApp : public AppBasic {
 	
 	Surface mySurface;
 	
+	
+	
 };
 
 void synapcityVizApp::prepareSettings( Settings *settings )
