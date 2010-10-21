@@ -3,7 +3,7 @@
 *~.nib
 
 build/
-
+*.xcodeproj
 !*.xcodeproj/project.pbxproj
 
 *.mode1v3

@@ -35,6 +35,10 @@ vLines::vLines(Vec2i _pos, int _width, int _nLines, int _spacing, int _length)
 		lines.push_back(l);
 	}
 }
+float vLines::getWidth()
+{
+	return nLines*width + (nLines-1)*spacing;
+}
 void vLines::setSpacing(float _spacing)
 {
 	

@@ -21,6 +21,7 @@ public:
 	void draw();
 	void setHeight();
 	void setSpacing(float _spacing);
+	float getWidth();
 	Vec2i pos;
 	int nLines;
 	int spacing;

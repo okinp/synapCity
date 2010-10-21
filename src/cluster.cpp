@@ -8,7 +8,7 @@
  */
 #include "cinder/Utilities.h"
 #include "cinder/app/AppBasic.h"
-
+#include "cinder/Timer.h"
 #include "cinder/Rand.h"
 #include "cluster.h"
 #include "cinder/gl/gl.h"
@@ -49,12 +49,12 @@ cluster::cluster(Vec2f _pos, float _radius, int _w, int _h, const Surface &mySur
 	}
 	
 	/*
-	while (this->size() < totalNumberParticles/totalNumberClusters ) {
-		float r = Rand::randFloat(0.0f, (float) mRadius);
-		float theta = Rand::randFloat(0.0f, (float) 2*PI);
-		Particle p = Particle(mCentre.x+r*cos(theta), mCentre.y+r*sin(theta), Rand::randFloat(-maxVelocity, maxVelocity),Rand::randFloat(-maxVelocity, maxVelocity));
-		this->add(p);
-	}
+	 while (this->size() < totalNumberParticles/totalNumberClusters ) {
+	 float r = Rand::randFloat(0.0f, (float) mRadius);
+	 float theta = Rand::randFloat(0.0f, (float) 2*PI);
+	 Particle p = Particle(mCentre.x+r*cos(theta), mCentre.y+r*sin(theta), Rand::randFloat(-maxVelocity, maxVelocity),Rand::randFloat(-maxVelocity, maxVelocity));
+	 this->add(p);
+	 }
 	 */
 	setTimeStep(0.2);
 	//glDisable(GL_TEXTURE_2D);
@@ -63,10 +63,12 @@ cluster::cluster(Vec2f _pos, float _radius, int _w, int _h, const Surface &mySur
 	//centerRepulsion = 2;
 	theLabel = Label(mCentre+Vec2i(60,60));
 	increasing = false;
+	
+	aTimer = ci::Timer();
 }
 cluster::~cluster()
 {
-
+	
 }
 void cluster::setCentre(Vec2f _mCentre)
 {
@@ -96,8 +98,18 @@ vector<Particle> cluster::getParticles() {
 }
 
 void cluster::draw()
-{
-	
+{	
+	//Randomly updating the equalizer in the label
+	//To be removed
+	if (aTimer.isStopped()) {
+		aTimer.start();
+	} else if (aTimer.getSeconds()>=1){
+		for (int i=0; i<theLabel.equalizer.nLines; i++) {
+			theLabel.setData(i, Rand::randFloat());
+		}
+		aTimer.stop();
+		aTimer = ci::Timer();
+	}
 	int n = particles.size();
 	
 	glBegin(GL_POINTS);
@@ -112,9 +124,9 @@ void cluster::draw()
 	if (showInfo) {
 		theLabel.draw();
 	}
-	 
+	
 }
- 
+
 void cluster::updateInfo()
 {
 	

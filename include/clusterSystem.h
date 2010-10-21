@@ -39,7 +39,7 @@ class clusterSystem {
 public:
 	clusterSystem();
 	~clusterSystem();
-	void setup(const ci::Surface &mySurface);
+	void setup(string (&images)[10],string _rootUrl);// const ci::Surface &mySurface);
 	void update();
 	void draw();
 	bool showInfo;
@@ -51,7 +51,7 @@ public:
 	int attForce;
 	int neighbor;
 	float lineOpacity, pointOpacity;
-	Surface	mySurface;
+	//Surface	mySurface;
 private:
 	void getJsonAndApplyForces();
 	void renderTextInfo();
