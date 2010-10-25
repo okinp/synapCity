@@ -9,6 +9,7 @@
 
 #ifndef _CLUSTER_SYSTEM_
 #define _CLUSTER_SYSTEM_
+
 #include "cluster.h"
 #include "jsonRead.h"
 #include "cinder/Vector.h"

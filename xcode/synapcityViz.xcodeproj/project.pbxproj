@@ -28,7 +28,6 @@
 		8E190188126E5558009B939D /* line.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E190185126E5558009B939D /* line.cpp */; };
 		8E190189126E5558009B939D /* vLines.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E190186126E5558009B939D /* vLines.cpp */; };
 		8E81F13A1254457A008845B6 /* mathias_wave.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E81F1391254457A008845B6 /* mathias_wave.json */; };
-		8EC797D61252FEAD00516D34 /* InfoPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EC797D41252FEAD00516D34 /* InfoPanel.cpp */; };
 		8EC797DA1252FF5E00516D34 /* cluster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EC797D71252FF5E00516D34 /* cluster.cpp */; };
 		8EC797DB1252FF5E00516D34 /* clusterSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EC797D81252FF5E00516D34 /* clusterSystem.cpp */; };
 		8EC797DC1252FF5E00516D34 /* jsonRead.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EC797D91252FF5E00516D34 /* jsonRead.cpp */; };
@@ -65,13 +64,11 @@
 		8E190185126E5558009B939D /* line.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = line.cpp; path = ../src/line.cpp; sourceTree = SOURCE_ROOT; };
 		8E190186126E5558009B939D /* vLines.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = vLines.cpp; path = ../src/vLines.cpp; sourceTree = SOURCE_ROOT; };
 		8E81F1391254457A008845B6 /* mathias_wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = mathias_wave.json; path = ../resources/mathias_wave.json; sourceTree = SOURCE_ROOT; };
-		8EC797D41252FEAD00516D34 /* InfoPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = InfoPanel.cpp; path = ../src/InfoPanel.cpp; sourceTree = SOURCE_ROOT; };
 		8EC797D71252FF5E00516D34 /* cluster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cluster.cpp; path = ../src/cluster.cpp; sourceTree = SOURCE_ROOT; };
 		8EC797D81252FF5E00516D34 /* clusterSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = clusterSystem.cpp; path = ../src/clusterSystem.cpp; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		8EC797D91252FF5E00516D34 /* jsonRead.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = jsonRead.cpp; path = ../src/jsonRead.cpp; sourceTree = SOURCE_ROOT; };
 		8EC797DD1252FF6F00516D34 /* cluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cluster.h; sourceTree = "<group>"; };
 		8EC797DE1252FF6F00516D34 /* clusterSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clusterSystem.h; sourceTree = "<group>"; };
-		8EC797DF1252FF6F00516D34 /* InfoPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPanel.h; sourceTree = "<group>"; };
 		8EC797E01252FF6F00516D34 /* jsonRead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsonRead.h; sourceTree = "<group>"; };
 		8EC797E11252FF6F00516D34 /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
 		8EC797E21252FF6F00516D34 /* ParticleSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSystem.h; sourceTree = "<group>"; };
@@ -107,7 +104,6 @@
 				8EC797D71252FF5E00516D34 /* cluster.cpp */,
 				8EC797D91252FF5E00516D34 /* jsonRead.cpp */,
 				8EC797D81252FF5E00516D34 /* clusterSystem.cpp */,
-				8EC797D41252FEAD00516D34 /* InfoPanel.cpp */,
 				8E112B8C124EB8BF00E39E36 /* ParticleSystem.cpp */,
 				00BAE6590E7ED9C10018A608 /* synapcityVizApp.cpp */,
 			);
@@ -169,7 +165,6 @@
 				8E190183126E54B4009B939D /* vLines.h */,
 				8EC797DD1252FF6F00516D34 /* cluster.h */,
 				8EC797DE1252FF6F00516D34 /* clusterSystem.h */,
-				8EC797DF1252FF6F00516D34 /* InfoPanel.h */,
 				8EC797E01252FF6F00516D34 /* jsonRead.h */,
 				8EC797E11252FF6F00516D34 /* Particle.h */,
 				8EC797E21252FF6F00516D34 /* ParticleSystem.h */,
@@ -270,7 +265,6 @@
 			files = (
 				00BAE65A0E7ED9C10018A608 /* synapcityVizApp.cpp in Sources */,
 				8E112B8E124EB8BF00E39E36 /* ParticleSystem.cpp in Sources */,
-				8EC797D61252FEAD00516D34 /* InfoPanel.cpp in Sources */,
 				8EC797DA1252FF5E00516D34 /* cluster.cpp in Sources */,
 				8EC797DB1252FF5E00516D34 /* clusterSystem.cpp in Sources */,
 				8EC797DC1252FF5E00516D34 /* jsonRead.cpp in Sources */,
