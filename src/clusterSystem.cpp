@@ -32,7 +32,7 @@ clusterSystem::~clusterSystem()
 {
 	
 }
-void clusterSystem::setup(const Surface &mySurface)
+void clusterSystem::setup(string (&images)[10],string _rootUrl)
 {
 	mPerlin = Perlin();
 	
@@ -104,13 +104,24 @@ void clusterSystem::setup(const Surface &mySurface)
 	*/
 			// pass in a surface for each cluster
 		for (int i = 0; i < container.size(); i++) {
+			
+			cout << "imasj " << _rootUrl + images[i] << endl;
+			
+			
+			Url url( _rootUrl + images[i] );
+			
+						
+			Surface mySurface = loadImage( loadUrl( url ) );
+			
 			cl = new cluster(container[i], 30,getWindowWidth(),getWindowHeight(), mySurface);
 			cl->setup(getWindowWidth(),getWindowHeight(), binPower);
 			cl->setColor(Vec3f(Rand::randFloat(0, 1),Rand::randFloat(0,1),Rand::randFloat(0,1)));
 			cl->theLabel.setArtworkID(i+1);
 			clusters.push_back(*cl);
 			cnt++;
+			 //*/
 		}
+			 
 		
 		
 	//}
