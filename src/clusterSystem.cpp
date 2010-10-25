@@ -32,7 +32,7 @@ clusterSystem::~clusterSystem()
 {
 	
 }
-void clusterSystem::setup(string (&images)[10],string _rootUrl)
+void clusterSystem::setup(string (&images)[10])
 {
 	mPerlin = Perlin();
 	
@@ -105,13 +105,12 @@ void clusterSystem::setup(string (&images)[10],string _rootUrl)
 			// pass in a surface for each cluster
 		for (int i = 0; i < container.size(); i++) {
 			
-			cout << "imasj " << _rootUrl + images[i] << endl;
+			//cout << "imasj " << _rootUrl + images[i] << endl;
 			
 			
-			Url url( _rootUrl + images[i] );
+			//Url url( _rootUrl + images[i] );
 			
-						
-			Surface mySurface = loadImage( loadUrl( url ) );
+			Surface mySurface = loadImage(cinder::app::App::get()->getResourcePath(images[i]));
 			
 			cl = new cluster(container[i], 30,getWindowWidth(),getWindowHeight(), mySurface);
 			cl->setup(getWindowWidth(),getWindowHeight(), binPower);

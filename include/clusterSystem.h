@@ -40,7 +40,7 @@ class clusterSystem {
 public:
 	clusterSystem();
 	~clusterSystem();
-	void setup(string (&images)[10],string _rootUrl);// const ci::Surface &mySurface);
+	void setup(string (&images)[10]);// const ci::Surface &mySurface);
 	void update();
 	void draw();
 	bool showInfo;

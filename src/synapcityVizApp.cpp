@@ -52,14 +52,9 @@ void synapcityVizApp::setup(){
 	Rand::randomize();
 	rootUrl = "http://dl.dropbox.com/u/2569433/Projects/synapcity/particle_images/";
 	showInfo = false;
-	Url url( "http://dl.dropbox.com/u/2569433/nebula.png" );
-	
 	string images [10] = { "0.png","1.png", "2.png", "3.png", "4.png","5.png","6.png", "7.png", "8.png", "9.png" }; 
-
-	//mySurface = loadImage( loadUrl( url ) );
-	
 	// instead of sending 1 surface send array of surfaces
-	theClusters.setup(images,rootUrl);
+	theClusters.setup(images);
 	
 
 
